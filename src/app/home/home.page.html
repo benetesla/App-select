@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            News letter
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">News letter</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-item>
+        <ion-label>Select a category</ion-label>
+        <ion-select [(ngModel)]="category" (ionChange)="onChange($event)">
+            <ion-select-option value="all">All</ion-select-option>
+            <ion-select-option value="business">Business</ion-select-option>
+            <ion-select-option value="entertainment">Entertainment</ion-select-option>
+            <ion-select-option value="general">General</ion-select-option>
+            <ion-select-option value="health">Health</ion-select-option>
+            <ion-select-option value="science">Science</ion-select-option>
+            <ion-select-option value="sports">Sports</ion-select-option>
+            <ion-select-option value="technology">Technology</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Select a country</ion-label>
+        <ion-select [(ngModel)]="country" (ionChange)="onChange($event)">
+            <ion-select-option value="all">All</ion-select-option>
+            <ion-select-option value="ae">United Arab Emirates</ion-select-option>
+            <ion-select-option value="ar">Argentina</ion-select-option>
+            <ion-select-option value="at">Austria</ion-select-option>
+            <ion-select-option value="au">Australia</ion-select-option>
+            <ion-select-option value="be">Belgium</ion-select-option>
+            <ion-select-option value="bg">Bulgaria</ion-select-option>
+            <ion-select-option value="br">Brazil</ion-select-option>
+            <ion-select-option value="ca">Canada</ion-select-option>
+            <ion-select-option value="ch">Switzerland</ion-select-option>
+            <ion-select-option value="cn">China</ion-select-option>
+            <ion-select-option value="co">Colombia</ion-select-option>
+            <ion-select-option value="cu">Cuba</ion-select-option>
+            <ion-select-option value="cz">Czech Republic</ion-select-option>
+            <ion-select-option value="de">Germany</ion-select-option>
+            <ion-select-option value="eg">Egypt</ion-select-option>
+            <ion-select-option value="fr">France</ion-select-option>
+            <ion-select-option value="gb">United Kingdom</ion-select-option>
+            <ion-select-option value="gr">Greece</ion-select-option>
+            <ion-select-option value="hk">Hong Kong</ion-select-option>
+            <ion-select-option value="hu">Hungary</ion-select-option>
+        </ion-select>
+
+    </ion-item>
+    <ion-checkbox [(ngModel)]="saved" (ionChange)="onChange($event)">
+        Saved</ion-checkbox>
+    <ion-button expand="block" (click)="getNews()">Get news</ion-button>
+
+</ion-content>
